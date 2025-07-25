@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Task 1.2P</title>
+    <meta name="author" content="225243322" />
+    <meta name="description" content="SIT744 Task 1.2P submission" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <h1>Mini Guide: How TCP Works!</h1>
+    <hr />
+    <br />
+    <br />
+    <h1>TCP (Transmission Control Protocol)</h1>
+    <br />
+    <!-- origin of TCP/IP -->
+    <h2>
+      <u>Origin</u>
+      <br />
+      TCP is one of the main protocols of the Internet protocol suite. It
+      originated in the initial network implementation in which it complemented
+      the Internet Protocol (IP). Therefore, the entire suite is commonly
+      referred to as TCP/IP
+    </h2>
+    <p>
+      The Internet protocol suite, commonly known as TCP/IP, is a
+      <b>
+        <em>
+          framework for organizing the communication protocols used in the
+          Internet
+        </em>
+      </b>
+      and similar computer networks according to functional criteria. The
+      foundational protocols in the suite are the Transmission Control Protocol
+      (TCP), the User Datagram Protocol (UDP), and the Internet Protocol (IP).
+      Early versions of this networking model were known as the Department of
+      Defense (DoD) model because the research and development were funded by
+      the United States Department of Defense through DARPA.
+    </p>
+    <br />
+    <!-- main uses of TCP/IP -->
+    <h2>
+      <u>Use</u>
+      <br />
+      Major internet applications such as the World Wide Web, email, remote
+      administration, and file transfer rely on TCP, which is part of the
+      transport layer of the TCP/IP suite. SSL/TLS often runs on top of TCP.
+    </h2>
+    <p>
+      TCP is used extensively by many internet applications, including the
+      <em>
+        World Wide Web (WWW), email, File Transfer Protocol, Secure Shell,
+        peer-to-peer file sharing, and streaming media.
+      </em>
+      TCP is
+      <b> optimized for accurate delivery rather than timely delivery </b> and
+      can incur relatively long delays (on the order of seconds) while waiting
+      for out-of-order messages or re-transmissions of lost messages. Therefore,
+      it is <u> not particularly suitable for real-time applications </u> such
+      as voice over IP. For such applications, protocols like the Real-time
+      Transport Protocol (RTP) operating over the User Datagram Protocol (UDP)
+      are usually recommended instead.
+    </p>
+    <!-- functionalities of TCP/IP -->
+    <h2>
+      <u>Functionalities</u>
+      <br />
+      TCP provides reliable, ordered, and error-checked delivery of a stream of
+      octets (bytes) between applications running on hosts communicating via an
+      IP network.
+    </h2>
+    <p>
+      <strong>Reliable transmission</strong>
+      <br />
+      TCP uses a sequence number to identify each byte of data. The sequence
+      number identifies the order of the bytes sent from each computer so that
+      <em>
+        <u>
+          the data can be reconstructed in order, regardless of any out-of-order
+          delivery that may occur.
+        </u>
+      </em>
+      <br />
+      <br />
+      <strong>Error detection</strong>
+      <br />
+      Sequence numbers allow receivers to discard duplicate packets and properly
+      sequence out-of-order packets. Acknowledgments allow senders to determine
+      when to retransmit lost packets. To assure correctness a checksum field is
+      included;
+    </p>
+    <br />
+    <!-- references -->
+    <h2>
+      <u>Source</u>
+      <br />
+      <a href="https://en.wikipedia.org/wiki/Transmission_Control_Protocol">
+        TCP
+      </a>
+      <br />
+      <a href="https://en.wikipedia.org/wiki/Internet_protocol_suite">
+        Internet Protocol Suite
+      </a>
+      <br />
+      <a
+        href="https://en.wikipedia.org/wiki/Transmission_Control_Protocol#Checksum_computation"
+      >
+        Checksumn Computation
+      </a>
+    </h2>
+  </body>
+</html>

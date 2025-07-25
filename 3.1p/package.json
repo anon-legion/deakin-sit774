@@ -1,0 +1,10 @@
+{
+  "type": "module",
+  "scripts": {
+    "start": "bun --watch ."
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
+

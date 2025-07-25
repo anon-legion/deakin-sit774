@@ -1,0 +1,42 @@
+html {
+    background-color: #282A36;
+    color: #F8F8F2;
+}
+
+main {
+    margin: 2.0em;
+    padding: 1.0em;
+    background-color: #44475A;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.2em;
+    color: #F1FA8C;
+}
+
+h1 {
+    background-color: #FF79C6;
+    color: #6272A4;
+}
+
+h2, h3, h4 {
+    border: 1px solid #8BE9FD;
+}
+
+a {
+    color: #50FA7B;
+    background-color: #BD93F9;
+}
+
+#future-table {
+    color: #FFB86C;
+}
+
+table, th, td {
+    border: 1px solid #FF5555 ;
+    border-collapse: collapse;
+    padding: 0.5em;
+}
