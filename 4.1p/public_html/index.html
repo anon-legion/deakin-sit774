@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>Bootstrap</title>
+
+  <link rel="stylesheet" href="reset.css" type="text/css">
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+</head>
+<body>
+<nav id="top" class="nav bg-black py-2">
+  <div class="container d-flex flex-row justify-content-between">
+    <a class="nav-link" href="#intro" style="color:white">Introduction</a>
+    <a class="nav-link" href="#pic-thumbnails" style="color:white">Butterfly Pictures (Thumbnails)</a>
+    <a class="nav-link" href="#pic-cards" style="color:white">Butterfly Pictures Cards</a>
+    <a class="nav-link" href="#pic-with-text" style="color:white">Butterfly Pictures & Text</a>
+    <a class="nav-link" href="#butterfly-table" style="color:white">Butterfly Table</a>
+  </div>
+</nav>
+<main>
+  <div class="container-fluid bg-primary py-5">
+    <div class="container">
+      <h1 class="display-1">Butterflies of the World</h1>
+      <h6 class="display-6">Some lovely brightly coloured butterflies</h6>
+    </div>
+  </div>
+  <div id="intro" class="container py-4">
+    <h4 class="display-4"><b>Introduction</b></h4>
+    <p>This is the simple page that shows a number of bootstrap components and the styles they provide to enhance plain
+      HTML content - while also supporting a responsive display (screen resizing)</p>
+    <br>
+    <p>Firstly, at the top of the page, within a <em class="text-danger">&lt;header&gt;...&lt;/header&gt;</em> section,
+      is a <b>navigation</b> list using the Bootstrap <em class="text-danger">&lt;nav&gt;...&lt;/nav&gt;</em> component.
+      Next is the <em class="text-danger">&lt;body&gt;...&lt;/body&gt;</em> section that contains a <b>banner</b> (a
+      title of the page and leading sentence, all with blue background), and the <b>content</b> of the page. The content
+      contains some pretty pictures of butterflies (using different layouts), as well as a bootstrap formatted table
+      with content. The final section is a <em class="text-danger">&lt;footer&gt;...&lt;/footer&gt;</em>.
+    </p>
+  </div>
+  <div class="container d-flex flex-row-reverse">
+    <a href="#top">Top</a>
+  </div>
+  <div id="pic-thumbnails" class="container py-4">
+    <h4 class="display-4"><b>Butterfly Pictures (Thumbnails)</b></h4>
+    <p>Below are some pretty pictures of butterflies, downloaded from the website <a href="https://unsplash.com/">Unsplash</a>
+      with beautiful and freely-usable images. These images are placed in a single bootstrap
+      <em class="text-danger">row</em> composed of three columns (using a combined <em class="text-danger">col-sm-4
+        col-12</em>, where the col-sm-4 forces 3 images to be in a row on all screen sizes <b>except</b> very small ones
+      (<576px) where the col-12 forces the images to use all 12 column grid units and stack each image on top of each
+      other). Each image has the class <em class="text-danger">img-thumbnail</em> applied to it, allowing it to resize
+      to the size of the column.
+    </p>
+    <div class="row">
+      <div class="col-sm-4 col-12">
+        <img
+            src="https://plus.unsplash.com/premium_photo-1710462716386-08fe07bb3c61?q=80&w=3705&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dhttps://plus.unsplash.com/premium_photo-1710462716386-08fe07bb3c61?q=80&w=3705&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dhttps://plus.unsplash.com/premium_photo-1710462716386-08fe07bb3c61?q=80&w=3705&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dhttps://plus.unsplash.com/premium_photo-1710462716386-08fe07bb3c61?q=80&w=3705&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dhttps://plus.unsplash.com/premium_photo-1710462716386-08fe07bb3c61?q=80&w=3705&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dhttps://plus.unsplash.com/premium_photo-1710462716386-08fe07bb3c61?q=80&w=3705&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="blue butterfly side-view on flower"
+            class="img-fluid img-thumbnail">
+      </div>
+      <div class="col-sm-4 col-12">
+        <img
+            src="https://plus.unsplash.com/premium_photo-1710462716826-a837008e3dbf?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGJ1dHRlcmZseXxlbnwwfHwwfHx8MA%3D%3D"
+            alt="blue butterfly top-view on flower"
+            class="img-fluid img-thumbnail">
+      </div>
+      <div class="col-sm-4 col-12">
+        <img
+            src="https://plus.unsplash.com/premium_photo-1724384819136-6f7a85651b7c?q=80&w=3732&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="blue butterfly side-view on white background"
+            class="img-fluid img-thumbnail">
+
+      </div>
+    </div>
+  </div>
+  <div class="container d-flex flex-row-reverse">
+    <a href="#top">Top</a>
+  </div>
+  <div id="pic-cards" class="container py-4">
+    <h4 class="display-4"><b>Butterfly Picture Cards</b></h4>
+    <div class="row align-items-stretch">
+      <div class="col-sm-4 col-12">
+        <div class="card h-100">
+          <img
+              src="https://images.unsplash.com/photo-1560263816-d704d83cce0f?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="orange-white butterfly top-view " class="card-img-top">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">This is a picture of a butterfly by Fleur</h5>
+            <p class="card-text">Here, the class <em class="text-danger">img-fluid rounded</em> has been applied to the
+              image.
+              The title
+              above uses <em class="text-danger">&lt;p class=&quot;lead&quot;&gt;</em> to make the text standout. While
+              this text uses <em class="text-danger">&lt;p class=&quot;small&quot;&gt;</em> to distinguish it from
+              normal
+              paragraph</p>
+            <button type="button" class="btn btn-primary mt-auto">Like</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4 col-12">
+        <div class="card h-100">
+          <img
+              src="https://images.unsplash.com/photo-1545310834-cd6a8a0884b8?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="black & white butterfly with red spots top-view" class="card-img-top">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">This is a picture of a butterfly by <b>Vivek Doshi</b></h5>
+            <p class="card-text">Another picture of a beautiful butterfly that has the class <em class="text-danger">img-fluid
+              rounded-pill</em> applied to it</p>
+            <button type="button" class="btn btn-primary mt-auto">Like</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4 col-12">
+        <div class="card h-100">
+          <img
+              src="https://images.unsplash.com/photo-1470107355970-2ace9f20ab15?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="yellow butterfly side-view" class="card-img-top">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">This is a picture of a butterfly by Boris Smokrovic</h5>
+            <p class="card-text">Here, the class <em class="text-danger">img-fluid
+              rounded-circle</em> has been applied to the image</p>
+            <button type="button" class="btn btn-primary mt-auto">Like</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="pic-with-text" class="container py-4">
+    <h4 class="display-4"><b>Butterfly Pictures with Text</b></h4>
+    <p>The following image and text is held within a new <em class="text-danger">div</em> which has the class attribute
+      <em class="text-danger">p-4 mb-4 bh-light rounded</em>, to set the padding, margin-below, background colour and
+      corner shape, respectively. It holds a <em class="text-danger">row</em>, with the image assigned to a <em
+          class="text-danger">col-sm-4</em> column and the text assigned to a single <em
+          class="text-danger">col-sm-8</em>; allowing it to span the remaining 8 column units. Added to each of these
+      two columns is the <em class="text-danger">col-12</em>, which says when the screen is smaller than 576px, it will
+      then use all 12 column grids for each image and text, allowing them to be stacked on top of each other.</p>
+    <div class="p-4 mb-4 bg-light rounded">
+      <div class="row">
+        <div class="col-sm-8 col-12">
+          <p class="lead">This is a picture of a butterfly by <b>Gary Bendig</b></p>
+          <p class="small">Another picture of a beautiful butterfly that has the class <em class="text-danger">img-fluid
+            rounded-pill</em> applied to it</p>
+        </div>
+        <div class="col-sm-4 col-12">
+          <img
+              src="https://images.unsplash.com/photo-1484704193309-27eaa53936a7?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGJ1dHRlcmZseXxlbnwwfHwwfHx8MA%3D%3D"
+              alt="butterfly side-view landing on flowers" class="img-fluid rounded-pill">
+        </div>
+      </div>
+    </div>
+    <p>In the final <em class="text-danger">row</em> use the div block controls used in the first row.</p>
+    <div class="p-4 mb-4 bg-light rounded">
+      <div class="row">
+        <div class="col-sm-4 col-12">
+          <img
+              src="https://plus.unsplash.com/premium_photo-1698524612460-32d35c637488?q=80&w=2978&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="white butterfly top-view" class="img-fluid rounded-circle">
+        </div>
+        <div class="col-sm-8 col-12">
+          <p class="lead">This is a picture of a butterfly by Zdenek Machacek</p>
+          <p class="small">Here, the class <em class="text-danger">img-fluid
+            rounded-circle</em> has been applied to the image</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container d-flex flex-row-reverse">
+    <a href="#top">Top</a>
+  </div>
+  <div id="butterfly-table" class="container py-4">
+    <h4 class="display-4"><b>UK Butterfly Data</b></h4>
+    <p>In this last section of the page, we have a nice table with some data from the 2021 United Kingdom Butterfly
+      Monitoring Scheme (UKBMS). Here the table is styled with the bootstrap classes <em class="text-danger">table
+        table-striped table-hover</em>, and the <em class="text-danger">table-success</em> applied to the table header
+      <em class="text-danger">thead</em>. Note, the table also includes a caption.</p>
+
+    <table class="table table-striped table-hover">
+      <caption>ENGLAND Summary of changes table 2021 (extract) <a
+          href="https://ukbms.org/">https://ukbms.org/</a></caption>
+      <thead class="table-success">
+      <tr>
+        <th><b>Species</b></th>
+        <th><b>Start Year</b></th>
+        <th><b>No. years with Index in 2021</b></th>
+        <th><b>No. sites monitored in 2021</b></th>
+        <th><b>2021 rank</b></th>
+        <th><b>% change 2020-2021</b></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Swallowtail</td>
+        <td>1976</td>
+        <td>45</td>
+        <td>16</td>
+        <td>23</td>
+        <td>-24</td>
+      </tr>
+      <tr>
+        <td>Dingy Skipper</td>
+        <td>1976</td>
+        <td>46</td>
+        <td>637</td>
+        <td>13</td>
+        <td>-11</td>
+      </tr>
+      <tr>
+        <td>Grizzled Skipper</td>
+        <td>1976</td>
+        <td>46</td>
+        <td>404</td>
+        <td>31</td>
+        <td>-17</td>
+      </tr>
+      <tr>
+        <td>Essex Skipper</td>
+        <td>1977</td>
+        <td>45</td>
+        <td>1078</td>
+        <td>29</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>Small Skipper</td>
+        <td>1976</td>
+        <td>46</td>
+        <td>1918</td>
+        <td>39</td>
+        <td>-16</td>
+      </tr>
+      <tr>
+        <td>Lulworth Skipper</td>
+        <td>1992</td>
+        <td>30</td>
+        <td>23</td>
+        <td>20</td>
+        <td>-13</td>
+      </tr>
+      <tr>
+        <td>Silver-spotted Skipper</td>
+        <td>1979</td>
+        <td>43</td>
+        <td>74</td>
+        <td>16</td>
+        <td>-40</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="container d-flex flex-row-reverse">
+    <a href="#top">Top</a>
+  </div>
+  <div class="container py-4">
+    <p>This then concludes the content in the <em class="text-danger">main</em> section of the page. Note that the end
+      of
+      each content block is a hyperlink back to teh <b>Top</b> of the page. It uses the <em class="text-danger">&lt;p
+        class=&quot;text-end&quot;&gt; to align to the right of the screen</em>.</p>
+    <br>
+    <p>The next and final section is the <em class="text-danger">footer</em>.</p>
+  </div>
+</main>
+<footer class="bg-black">
+  <div class="container py-4">
+    <p class="text-white text-center">&copy; 2025 A webpage made by Gio for SIT774 Task 4.1P</p>
+  </div>
+</footer>
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"-->
+<!--        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"-->
+<!--        crossorigin="anonymous"></script>-->
+</body>
+</html>
