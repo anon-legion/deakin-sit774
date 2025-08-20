@@ -17,7 +17,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #F1FA8C;
 }
 
-h1 {
+#top {
     background-color: #FF79C6;
     color: #6272A4;
 }
@@ -31,12 +31,23 @@ a {
     background-color: #BD93F9;
 }
 
-#future-table {
-    color: #FFB86C;
-}
-
 table, th, td {
     border: 1px solid #FF5555 ;
     border-collapse: collapse;
     padding: 0.5em;
 }
+
+.task-2 {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.2em;
+    /*color: #BD93F9;*/
+    color: #6272A4;
+    background-color: black;
+}
+
+#future-table :is(tr, th, td){
+    color: #FFB86C;
+}
+
