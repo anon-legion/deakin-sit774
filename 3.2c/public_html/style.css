@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 *, body {
   margin: 0;
   font-family: "Bitcount Prop Single", system-ui;
@@ -69,16 +73,37 @@ label {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 4em;
+  padding: 3em;
   background-color: #F8F8F2;
   border-radius: 5%;
   box-shadow: 0 0 5px #50FA7B;
-  width: 250px;
+  max-width: 450px;
+  min-width: 300px;
 }
 
 .input-group {
   display: flex;
   flex-direction: column;
   margin: 1em 0;
+  max-width: 350px;
+  min-width: 200px;
 }
 
+.input-group input {
+  width: 100%;
+  padding: 0.5em;
+  border: 1px solid #FF79C6;
+}
+
+@media (max-width: 600px) {
+  .main {
+    flex-direction: column;
+  }
+
+  .bg-column, .login-column {
+    width: 100vw;
+    min-height: 50vh;
+    max-height: 50vh;
+  }
+
+}
