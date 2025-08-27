@@ -37,25 +37,25 @@
         <p class="lead fw-bold mb-3">Contact Details</p>
         <div class="row">
           <div class="col-md-6 col-12 mb-3">
-            <label for="firstname" class="form-label">Firstname</label>
+            <label for="firstname" class="form-label">Firstname <span class="text-danger">*</span></label>
             <input type="text" class="form-control" id="firstname" required>
           </div>
           <div class="col-md-6 col-12 mb-3">
-            <label for="surname" class="form-label">Surname</label>
-            <input type="text" class="form-control" id="surname" required>
+            <label for="familyname" class="form-label">Familyname <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" id="familyname" required>
           </div>
         </div>
         <div class="row">
           <div class="col-md-6 col-12 mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" required>
+            <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+            <input type="email" class="form-control" id="email" placeholder="username@emai.com" required>
           </div>
           <div class="col-md-3 col-12 mb-3">
-            <label for="mobile" class="form-label">Mobile</label>
+            <label for="mobile" class="form-label">Mobile <span class="text-danger">*</span></label>
             <input type="tel" class="form-control" id="mobile" maxlength="10" minlength="10" required>
           </div>
           <div class="col-md-3 col-12 mb-3">
-            <label for="birthdate" class="form-label">Birth Date</label>
+            <label for="birthdate" class="form-label" >Birth Date <span class="text-danger">*</span></label>
             <input type="date" class="form-control" id="birthdate"
                    onclick="document.getElementById('birthdate').showPicker && document.getElementById('birthdate').showPicker(); document.getElementById('birthdate').focus();"
                    required>
@@ -86,7 +86,7 @@
           </div>
           <div class="col-md-3 col-12 mb-3">
             <label for="postcode" class="form-label">Postcode</label>
-            <input type="number" class="form-control" id="postcode" maxlength="4" minlength="6">
+            <input type="number" class="form-control" id="postcode" min="1000" max="9999">
           </div>
         </div>
       </div>
