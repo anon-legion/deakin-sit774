@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Item Entry Form</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-light p-4">
+    <div class="container">
+      <h3 class="mb-4">Enter Item Details</h3>
+      <div class="row mb-3">
+        <div class="col-md-4">
+          <label for="itemName" class="form-label">Item Name</label>
+          <input
+            type="text"
+            id="itemName"
+            class="form-control"
+            placeholder="Enter item name"
+          />
+        </div>
+        <div class="col-md-4">
+          <label for="itemId" class="form-label">ID</label>
+          <input
+            type="number"
+            id="itemId"
+            class="form-control"
+            placeholder="Enter ID"
+          />
+        </div>
+        <div class="col-md-4">
+          <label for="itemDate" class="form-label">Date</label>
+          <input type="date" id="itemDate" class="form-control" />
+        </div>
+      </div>
+      <button id="enterBtn" class="btn btn-primary mb-4">Enter</button>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="sortRadio" id="sortById" value="id" checked>
+        <label class="form-check-label" for="sortById">
+          Sort by ID
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="sortRadio" id="sortByDate" value="date">
+        <label class="form-check-label" for="sortByDate">
+          Sort by Date
+        </label>
+      </div>
+      <div id="output" class="alert alert-secondary" role="alert"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
