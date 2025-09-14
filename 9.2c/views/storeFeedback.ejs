@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title><%= title || '' %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      body {
+        background: linear-gradient(120deg, #f6d365, #fda085);
+      }
+
+      .form-card {
+        background-color: #ffffffdd;
+        padding: 2rem;
+        border-radius: 1rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .form-label {
+        font-weight: 500;
+      }
+    </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+<!-- Header -->
+<%- include('partials/header', { companyName: companyName }) %>
+
+<!-- Main Form -->
+<main class="flex-fill">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="form-card">
+                    <h2 class="mb-4 text-center text-primary">Feedback Form</h2>
+
+                    <% if (ratingInt > 3) { %>
+                        <div class="alert alert-success text-center" role="alert">
+                            <h4 class="alert-heading">Thank you for your positive feedback!</h4>
+                        </div>
+                    <% } else { %>
+                        <div class="alert alert-danger text-center" role="alert">
+                            <h4 class="alert-heading">Sorry for your negative feedback!</h4>
+                        </div>
+                    <% } %>
+
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" id="name" name="name" class="form-control" value="<%= body.name %>"
+                                   disabled>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" value="<%= body.email %>"
+                                   disabled>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="date" class="form-label">Date Purchased</label>
+                            <input type="date" id="date" name="date" class="form-control" value="<%= body.date %>"
+                                   disabled>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="item" class="form-label">Item Name</label>
+                            <select id="item" name="item" class="form-select" disabled>
+                                <option value="" disabled selected>Select an item...</option>
+                                <% items.forEach(function(item) { %>
+                                    <option value="<%= item %>" <%= item === body.item ? 'selected' : '' %>><%= item %></option>
+                                <% }) %>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Comment</label>
+                            <textarea id="message" name="message" rows="4" class="form-control"
+                                      placeholder="Your feedback..." disabled><%= body.message %></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="avg-rating" class="form-label">Average Rating</label>
+                            <p class="lead text-success"><strong><%= avgRating %></strong><span
+                                        class="text-secondary-emphasis">(<%= count %>)</span></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Footer -->
+<%- include('partials/footer', { address: address }) %>
+
+</body>
+</html>
