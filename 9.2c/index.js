@@ -15,17 +15,16 @@ app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 
 const parseFeedbackPayload = (payload = {}) => ({
-  name: payload.name ?? '',
-  email: payload.email ?? '',
-  item: payload.item ?? '',
-  date: payload.date ?? '',
-  rating: payload.rating ?? '',
-  message: payload.message ?? ''
+  name: payload.name ?? "",
+  email: payload.email ?? "",
+  item: payload.item ?? "",
+  date: payload.date ?? "",
+  rating: payload.rating ?? "",
+  message: payload.message ?? "",
 });
 
 // Homepage with form
 app.get("/", (req, res) => {
-
   res.render("feedback", {
     title: "Customer Feedback",
     items: itemList,
@@ -37,7 +36,6 @@ app.get("/", (req, res) => {
 });
 
 app.get("/store-feedback", (req, res) => {
-
   res.render("storeFeedback", {
     title: "Store Feedback",
     items: itemList,
@@ -49,17 +47,24 @@ app.get("/store-feedback", (req, res) => {
 // Form submission handler
 app.post("/submit-feedback", (req, res) => {
   const payload = parseFeedbackPayload(req.body);
-  const validationErrors = Object.entries(payload).reduce((acc, [key, value]) => {
-    if (!value) {
-      acc.push(key);
-    }
+  const validationErrors = Object.entries(payload).reduce(
+    (acc, [key, value]) => {
+      if (!value) {
+        acc.push(key);
+      }
 
-    if (key === 'email' && value && value.split('@')[1]?.toLowerCase() === 'deakin.edu.au') {
-      acc.push(key)
-    }
+      if (
+        key === "email" &&
+        value &&
+        value.split("@")[1]?.toLowerCase() === "deakin.edu.au"
+      ) {
+        acc.push(key);
+      }
 
-    return acc;
-  }, []);
+      return acc;
+    },
+    [],
+  );
 
   if (validationErrors.length > 0) {
     return res.render("feedback", {
@@ -82,7 +87,9 @@ app.post("/submit-feedback", (req, res) => {
     body: req.body,
     items: itemList,
     ratingInt,
-    avgRating: (ratingTracker[req.body.item].total / ratingTracker[req.body.item].count).toFixed(1),
+    avgRating: (
+      ratingTracker[req.body.item].total / ratingTracker[req.body.item].count
+    ).toFixed(1),
     count: ratingTracker[req.body.item].count,
     companyName: "dKin Resalers",
     address: "123 Market Lane, Brisbane, QLD 4000",

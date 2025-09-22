@@ -21,6 +21,41 @@ const butterflyArray = [
   "Large Heath"
 ];
 
+function sum() {
+  try {
+    const x = parseInt(prompt("Input first number to add:"), 10);
+    const y = parseInt(prompt("Input second number to add:"), 10);
+    if (isNaN(x) || isNaN(y)) {
+      throw new Error("Invalid input");
+    }
+
+    const sum = x + y;
+    window.alert(`${x} + ${y} = ${sum}`);
+  } catch (e) {
+    window.alert(e.message);
+  }
+}
+
+function quotient() {
+  try {
+    const dividend = parseInt(prompt("Input dividend:"), 10);
+    const divisor = parseInt(prompt("Input divisor:"), 10);
+
+    if (isNaN(dividend) || isNaN(divisor)) {
+      throw new Error("Invalid input");
+    }
+
+    if (divisor === 0) {
+      throw new Error("Division by zero is not allowed");
+    }
+
+    const quotient = dividend / divisor;
+    window.alert(`${dividend} / ${divisor} = ${quotient}`);
+  } catch (e) {
+    window.alert(e.message);
+  }
+}
+
 
 function buildButterflyList() {
   const name = prompt('What is your name?');
