@@ -1,5 +1,6 @@
 assets/
 node_modules/
+.direnv/
 
 .env
 .envrc
